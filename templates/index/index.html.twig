@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ titulo|default('Inicio')}}{% endblock %}
+
+{% block body %}
+
+
+    {% if dql is defined %}
+        <code>
+            {{ dql }}
+        </code>
+        <hr />
+    {% endif %}
+
+    
+    
+    {% if sql is defined %}
+        <code>
+            {{ sql }}
+        </code>
+        <hr />
+    {% endif %}
+    
+    {% if resultado is defined %}
+        <code>
+            {{ resultado }}
+        </code>
+        <hr />
+    {% endif %}
+    
+
+
+{% endblock %}
